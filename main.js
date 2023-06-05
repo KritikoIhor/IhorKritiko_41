@@ -53,4 +53,4 @@ userInput.render();
 userInput.rotate();
 userInput.sumOfNumbers(3, 4);
 userInput.sumOfNumbers();
-// userInput.redirect('asdasd');
+// userInput.redirect();
