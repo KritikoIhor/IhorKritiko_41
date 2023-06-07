@@ -27,30 +27,24 @@ HTMLAnchor.prototype.redirect = function () {
 
 //------------------------ Home work --------------------
 
-function HTMLElementInput(a, b, ...arg) {
+function HTMLElementInput(value, ...arg) {
     mySuper(HTMLElement, this, arg);
-    this.a = a;
-    this.b = b;
+    this.value = value;
 }
 
 HTMLElementInput.prototype.__proto__ = HTMLElement.prototype;
 
-HTMLElementInput.prototype.sumOfNumbers = function (a, b) {
-    a = a || this.a;
-    b = b || this.b;
-    if (typeof a === 'number' && typeof b === 'number') {
-        console.log('Sum of numers : ', a + b);
-    } else {
-        console.log('Oops... Something wrong :)')
-    }
+HTMLElementInput.prototype.typeOfValue = function (value) {
+    value = value || this.value
+    console.log(typeof value);
 }
 
-const userInput = new HTMLElementInput(3, 22, 'input', 'sum', 12);
+const userInput = new HTMLElementInput(true, 'input', 'checkValue', 12);
 
 console.log(userInput);
 
-userInput.render();
-userInput.rotate();
-userInput.sumOfNumbers(3, 4);
-userInput.sumOfNumbers();
+// userInput.render();
+// userInput.rotate();
+userInput.typeOfValue(' ');
+userInput.typeOfValue('');
 // userInput.redirect('asdasd');
